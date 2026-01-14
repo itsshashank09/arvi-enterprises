@@ -1,0 +1,29 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f7a4d"/>
+      <stop offset="1" stop-color="#165a38"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Container shape: Soft rounded squircle -->
+  <rect x="20" y="20" width="160" height="160" rx="40" fill="url(#logoGradient)" />
+  
+  <!-- Stylized 'A' / Mobile shape -->
+  <!-- Left leg -->
+  <path d="M70 140 L100 50" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <!-- Right leg -->
+  <path d="M130 140 L100 50" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <!-- Crossbar (slightly curved like a signal wave) -->
+  <path d="M82 110 Q100 120 118 110" stroke="#d4af37" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Dot / Accent (Camera/Sensor/Notification) -->
+  <circle cx="100" cy="140" r="8" fill="#d4af37" />
+  
+  <!-- Shine effect -->
+  <path d="M40 40 Q100 20 160 40" stroke="white" stroke-width="2" stroke-opacity="0.2" fill="none"/>
+</svg>

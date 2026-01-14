@@ -1,650 +1,615 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Arvi Enterprises - Your trusted mobile shop in Siddapur, Karnataka. New smartphones, second-hand phones, chargers, earphones, power banks, smart watches and all mobile accessories.">
-    <meta name="keywords"
-        content="mobile shop siddapur, smartphones, second hand phones, mobile accessories, chargers, earphones, power bank, smart watch, arvi enterprises">
-    <meta name="author" content="Arvi Enterprises">
-    <title>Arvi Enterprises | Mobile Shop Siddapur - Phones, Accessories & More</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arvi Enterprises - Your Trusted Mobile Shop</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@600;700&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;900&amp;family=Manrope:wght@400;500;700&amp;family=Noto+Sans+Kannada:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1f7a4d",
+                        "primary-dark": "#165a38",
+                        "accent": "#d4af37",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#131f19",
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "kannada": ["Noto Sans Kannada", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
+                    backgroundImage: {
+                        'pattern-kasuti': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
 
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Epilogue', sans-serif;
+        }
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+        .kannada-text {
+            font-family: 'Noto Sans Kannada', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <span class="logo-kannada">ಆರ್ವಿ ಎಂಟರ್‌ಪ್ರೈಸಸ್</span>
-                    <span class="logo-english">Arvi Enterprises</span>
-                </a>
-
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#products" class="nav-link">Products</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-
-                <div class="nav-buttons">
-                    <a href="tel:+919449360059" class="btn btn-outline">
-                        <span class="material-icons-outlined">call</span>
-                        Call Now
-                    </a>
-                    <a href="https://wa.me/919449360059?text=Hello%20Arvi%20Enterprises!%20I%20have%20an%20enquiry."
-                        class="btn btn-primary" target="_blank">
-                        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                        </svg>
+<body class="bg-background-light dark:bg-background-dark text-[#121714] overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-[#e5e7eb] dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center gap-3">
+                    <img alt="Arvi Mobiles Logo"
+                        class="w-11 h-11 rounded-xl shadow-sm hover:scale-105 transition-transform duration-300"
+                        src="assets/logo.svg" />
+                    <div class="flex flex-col">
+                        <h1 class="kannada-text text-lg sm:text-xl font-bold leading-none text-primary">ಅರ್ವಿ ಮೊಬೈಲ್ಸ್
+                        </h1>
+                        <span class="text-xs tracking-widest uppercase font-medium text-gray-500 mt-0.5">Arvi
+                            Mobiles</span>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors"
+                        href="#">Home</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                        href="#products">Products</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                        href="#services">Services</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                        href="#about">About</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/917349758011" target="_blank"
+                        class="hidden lg:flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-surface border border-gray-200 text-gray-700 text-sm font-bold hover:bg-gray-50 transition-colors card-shadow">
+                        <span class="material-symbols-outlined text-[18px] text-[#25D366]">chat</span>
                         WhatsApp
                     </a>
+                    <a href="tel:+919449360059"
+                        class="flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all transform hover:-translate-y-0.5">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        <span class="hidden sm:inline">Call Now</span>
+                    </a>
                 </div>
-
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+            </div>
         </div>
     </header>
-
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-pattern"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="hero-badge">✨ Trusted Since Years</span>
-                    <h1 class="hero-title">Your Trusted <span class="highlight">Mobile Shop</span> in Siddapur</h1>
-                    <p class="hero-description">New smartphones, second-hand phones, chargers, earphones, power banks,
-                        smart watches and all mobile accessories at the best prices.</p>
-                    <div class="hero-buttons">
-                        <a href="tel:+919449360059" class="btn btn-primary btn-lg">
-                            <span class="material-icons-outlined">call</span>
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/919449360059?text=Hello%20Arvi%20Enterprises!%20I%20have%20an%20enquiry."
-                            class="btn btn-secondary btn-lg" target="_blank">
-                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    <section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-pattern-kasuti opacity-60 pointer-events-none"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <!-- Hero Content -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-yellow-700 text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="w-2 h-2 rounded-full bg-yellow-600"></span>
+                        Premium Mobile Store
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#121714] leading-tight tracking-tight mb-6">
+                        Your Trusted <br class="hidden lg:block" />
+                        <span class="text-primary relative inline-block">
+                            Mobile Shop
+                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-accent opacity-40" fill="none"
+                                viewbox="0 0 200 9" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.00025 6.99997C2.00025 6.99997 101.5 1.49997 197.5 4.99999"
+                                    stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
                             </svg>
-                            WhatsApp Enquiry
-                        </a>
-                        <a href="https://maps.google.com/?q=Sagar+Cross+Siddapur+Karnataka+581355"
-                            class="btn btn-outline btn-lg" target="_blank">
-                            <span class="material-icons-outlined">location_on</span>
-                            Get Directions
+                        </span>
+                        in Siddapur
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Discover the latest smartphones, premium accessories, and expert repair services. We blend
+                        cutting-edge technology with the warmth of local trust.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <button
+                            class="flex items-center justify-center h-12 px-8 rounded-xl bg-primary text-white text-base font-bold shadow-xl shadow-primary/20 hover:bg-primary-dark hover:shadow-2xl transition-all">
+                            View Collection
+                        </button>
+                        <a href="#contact"
+                            class="flex items-center justify-center h-12 px-8 rounded-xl bg-surface border border-gray-200 text-gray-800 text-base font-bold hover:bg-gray-50 transition-colors">
+                            Contact Us
                         </a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Happy Customers</span>
+                    <div
+                        class="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 font-medium">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+                            Genuine Products
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Products</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Years Trust</span>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[20px]">handshake</span>
+                            Trusted Service
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">
-                        <!-- Main Phone -->
-                        <div class="phone-mockup">
-                            <div class="phone-border">
-                                <div class="phone-notch-island"></div>
-                                <div class="phone-screen">
-                                    <div class="screen-header">
-                                        <div class="status-left">12:45</div>
-                                        <div class="status-right">
-                                            <span class="material-icons-outlined">signal_cellular_alt</span>
-                                            <span class="material-icons-outlined">wifi</span>
-                                            <span class="material-icons-outlined">battery_full</span>
-                                        </div>
-                                    </div>
-                                    <div class="screen-body">
-                                        <div class="screen-widget clock-widget">
-                                            <div class="widget-time">12:45</div>
-                                            <div class="widget-date">Tuesday, 14 Jan</div>
-                                        </div>
-                                        <div class="screen-apps-grid">
-                                            <div class="app-item" style="--app-color: #25D366"><span
-                                                    class="material-icons-outlined">call</span></div>
-                                            <div class="app-item" style="--app-color: #1A365D"><span
-                                                    class="material-icons-outlined">message</span></div>
-                                            <div class="app-item" style="--app-color: #FF6B35"><span
-                                                    class="material-icons-outlined">camera_alt</span></div>
-                                            <div class="app-item" style="--app-color: #333"><span
-                                                    class="material-icons-outlined">settings</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="home-bar"></div>
-                                </div>
-                            </div>
+                <!-- Hero Image -->
+                <div class="flex-1 w-full max-w-[600px] lg:max-w-none relative">
+                    <div class="absolute inset-0 bg-accent/20 rounded-[2.5rem] rotate-3 blur-sm transform scale-95 z-0">
+                    </div>
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden card-shadow bg-surface aspect-[4/3] group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                        <div class="absolute bottom-6 left-6 z-20 text-white">
+                            <p class="text-sm font-medium opacity-90 mb-1">New Arrivals</p>
+                            <p class="text-xl font-bold">Latest Flagship Smartphones</p>
                         </div>
-
-                        <!-- Floating Elements -->
-                        <div class="floating-badge badge-1">
-                            <div class="badge-icon"><span class="material-icons-outlined">verified</span></div>
-                            <div class="badge-text">
-                                <span class="badge-title">Genuine</span>
-                                <span class="badge-subtitle">100% Original</span>
-                            </div>
-                        </div>
-                        <div class="floating-badge badge-2">
-                            <div class="badge-icon"><span class="material-icons-outlined">local_offer</span></div>
-                            <div class="badge-text">
-                                <span class="badge-title">Best Prices</span>
-                                <span class="badge-subtitle">In Siddapur</span>
-                            </div>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Modern Samsung smartphone with colorful display"
+                            style="background-image: url('assets/hero_phone.png');">
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Product Categories -->
-    <section class="categories" id="products">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Our Products</span>
-                <h2 class="section-title">Browse by Category</h2>
-                <p class="section-description">Explore our wide range of mobile phones and accessories</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card" data-aos="fade-up">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">phone_android</span>
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Feature 1 -->
+                <div
+                    class="flex flex-col items-start p-6 rounded-2xl bg-background-light hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[28px]">sell</span>
                     </div>
-                    <h3>New Smartphones</h3>
-                    <p>Latest models from top brands</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Best Prices Guaranteed</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Competitive rates on all new releases and pre-owned
+                        devices, ensuring you get the best value in town.</p>
                 </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">smartphone</span>
+                <!-- Feature 2 -->
+                <div
+                    class="flex flex-col items-start p-6 rounded-2xl bg-background-light hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[28px]">verified_user</span>
                     </div>
-                    <h3>Second-Hand Phones</h3>
-                    <p>Quality checked & affordable</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">100% Genuine Products</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Every device comes with an authentic manufacturer
+                        warranty. We prioritize quality and trust above all.</p>
                 </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">cable</span>
+                <!-- Feature 3 -->
+                <div
+                    class="flex flex-col items-start p-6 rounded-2xl bg-background-light hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[28px]">location_on</span>
                     </div>
-                    <h3>Chargers & Cables</h3>
-                    <p>Fast charging solutions</p>
-                </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">headphones</span>
-                    </div>
-                    <h3>Earphones & Bluetooth</h3>
-                    <p>Wired & wireless audio</p>
-                </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">battery_charging_full</span>
-                    </div>
-                    <h3>Power Banks</h3>
-                    <p>Stay charged on the go</p>
-                </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">watch</span>
-                    </div>
-                    <h3>Smart Watches</h3>
-                    <p>Fitness & smart features</p>
-                </div>
-                <div class="category-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="category-icon">
-                        <span class="material-icons-outlined">phonelink_lock</span>
-                    </div>
-                    <h3>Cases & Screen Guards</h3>
-                    <p>Protect your device</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Local Support in Siddapur</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Proudly serving our community with dedicated
+                        after-sales support and friendly, face-to-face service.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Popular Items</span>
-                <h2 class="section-title">Featured Products</h2>
-                <p class="section-description">Check out our best-selling products</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-badge">Hot</div>
-                    <div class="product-image">
-                        <span class="material-icons-outlined">phone_android</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Samsung Galaxy M34</h3>
-                        <p>5G, 128GB, 6000mAh Battery</p>
-                        <div class="product-price">
-                            <span class="price">₹16,999</span>
-                            <span class="original-price">₹19,999</span>
-                        </div>
-                        <a href="https://wa.me/919449360059?text=Hi!%20I%20want%20to%20enquire%20about%20Samsung%20Galaxy%20M34"
-                            class="btn btn-primary btn-sm" target="_blank">
-                            Enquire on WhatsApp
-                        </a>
-                    </div>
+    <!-- Categories Grid -->
+    <section class="py-20 bg-background-light relative" id="products">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-[#121714] mb-3">Explore Our Collection</h2>
+                    <p class="text-gray-600">Find exactly what you're looking for.</p>
                 </div>
-                <div class="product-card">
-                    <div class="product-badge bestseller">Bestseller</div>
-                    <div class="product-image">
-                        <span class="material-icons-outlined">phone_android</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Redmi Note 13 Pro</h3>
-                        <p>5G, 256GB, 108MP Camera</p>
-                        <div class="product-price">
-                            <span class="price">₹22,999</span>
-                            <span class="original-price">₹26,999</span>
-                        </div>
-                        <a href="https://wa.me/919449360059?text=Hi!%20I%20want%20to%20enquire%20about%20Redmi%20Note%2013%20Pro"
-                            class="btn btn-primary btn-sm" target="_blank">
-                            Enquire on WhatsApp
-                        </a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge">New</div>
-                    <div class="product-image">
-                        <span class="material-icons-outlined">watch</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>boAt Storm Call 2</h3>
-                        <p>Smart Watch, Bluetooth Calling</p>
-                        <div class="product-price">
-                            <span class="price">₹1,799</span>
-                            <span class="original-price">₹2,999</span>
-                        </div>
-                        <a href="https://wa.me/919449360059?text=Hi!%20I%20want%20to%20enquire%20about%20boAt%20Storm%20Call%202"
-                            class="btn btn-primary btn-sm" target="_blank">
-                            Enquire on WhatsApp
-                        </a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge">Popular</div>
-                    <div class="product-image">
-                        <span class="material-icons-outlined">headphones</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>boAt Rockerz 450</h3>
-                        <p>Wireless Headphones, 40hr Battery</p>
-                        <div class="product-price">
-                            <span class="price">₹1,299</span>
-                            <span class="original-price">₹2,490</span>
-                        </div>
-                        <a href="https://wa.me/919449360059?text=Hi!%20I%20want%20to%20enquire%20about%20boAt%20Rockerz%20450"
-                            class="btn btn-primary btn-sm" target="_blank">
-                            Enquire on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="products-cta">
-                <a href="https://wa.me/919449360059?text=Hi!%20I%20want%20to%20see%20more%20products"
-                    class="btn btn-secondary btn-lg" target="_blank">
-                    View All Products on WhatsApp
+                <a class="hidden md:inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+                    href="#">
+                    View All Products
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Why Us</span>
-                <h2 class="section-title">Why Choose Arvi Enterprises?</h2>
-                <p class="section-description">Your satisfaction is our priority</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Modern smartphone floating in abstract space"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdh3PbL2tFjLAIFOgAP605VADbygXOZv54c7Q6CHo-4gKAxbE9Ew8WURiaC_RlJSZsZxJyvTrKdRgsplnKORTKg8cuMsSc42xWpWQ6J409VasCE1oygRvgKFdHaHoQ4pYHMZiSPkTQNKHFdJxpgbylGZTprrIKWwD6B6S4SKuvaIfyhUQew0NqPo6eKj6YODrXq9noH40jE0nUXp8gjRZ1GMX1mGKzbOs-xGB4aoP0Vi_BuBivhmE8AGYTeziqJRUtCCaCsdeY1w-a');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-white text-xl font-bold mb-1">New Smartphones</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                            Latest flagship models</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Collection of used smartphones on a wooden surface"
+                        style="background-image: url('assets/preowned_phones.png');">">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-white text-xl font-bold mb-1">Pre-Owned</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                            Quality checked &amp; affordable</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Headphones and charging cables neatly arranged"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATCA4RUrKGheAR9tI06zze_Vo0r25EnEbStisOQkUcEAGgydlnvdep_XEman_jZX1UWfrdz95FNUK6YX2p5SfK_2TTLHm5Ttdk-UANfPEuVmBg5ZU-i6BpD7hx_8Qh1LmmL8IDRbrBG_WYuKVt-OmqxkCLvHJjh5mcu96N4k5OC3RgEKOgpxgW3m6RtvzLYlKtnFt55PEcSiO25EeMxQaRJX016pQkxnlOrkCLqfSCXpIat_98f5Si-0QJZjvurkmm5ob0Zyhmz4g-');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-white text-xl font-bold mb-1">Accessories</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                            Cases, chargers &amp; more</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Technician repairing a mobile phone circuit board"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbvW1YMhrGsXlqLRTY8w2EEsOIRPtP0KHwHBD7Hojaj7VRaOTy7wwwqMr3UK_Dfl3qIZc_lOI86h-22DkQ-DyFUwN_kcJdQ46lj12U6QiC_4Xv6ci6yKzkZYWrhuX7j7_ZB_B1F1KGaEeP6ZG0VTIGOwvNAL61B85j9CDka2XGS3tYnbYkzj0lkLTH0jKpWRrDVPToTUw8-c0M2KhochWx2KpVHxSeIG3n9aHvxcJUZFZAZMnMKDvzayJnnaQ9G3HuQz-vnFM_EIQu');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-white text-xl font-bold mb-1">Repairs &amp; Service</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                            Fast &amp; reliable fixes</p>
+                    </div>
+                </div>
             </div>
-            <div class="trust-cards">
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <span class="material-icons-outlined">verified</span>
-                    </div>
-                    <h3>Genuine Products</h3>
-                    <p>100% authentic products with manufacturer warranty. No fakes, no compromises.</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <span class="material-icons-outlined">savings</span>
-                    </div>
-                    <h3>Best Prices</h3>
-                    <p>Competitive prices on all products. Get the best value for your money.</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <span class="material-icons-outlined">thumb_up</span>
-                    </div>
-                    <h3>Trusted Second-Hand</h3>
-                    <p>Quality-checked pre-owned phones with warranty. Safe and reliable.</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <span class="material-icons-outlined">support_agent</span>
-                    </div>
-                    <h3>Fast Support</h3>
-                    <p>Quick customer service and after-sales support. We're always here to help.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">What We Offer</span>
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-description">Complete mobile solutions under one roof</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">phone_android</span>
-                    </div>
-                    <h3>New Mobile Sales</h3>
-                    <p>Latest smartphones from Samsung, Redmi, Realme, Vivo, Oppo, and more top brands.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">sync_alt</span>
-                    </div>
-                    <h3>Second-Hand Phones</h3>
-                    <p>Quality pre-owned phones at affordable prices with proper quality checks.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">shopping_bag</span>
-                    </div>
-                    <h3>Accessories Sales</h3>
-                    <p>Chargers, cables, earphones, power banks, covers, and all mobile accessories.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">screen_rotation</span>
-                    </div>
-                    <h3>Screen Guard Fitting</h3>
-                    <p>Professional screen protector installation for all phone models.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">build</span>
-                    </div>
-                    <h3>Basic Phone Support</h3>
-                    <p>Help with phone setup, data transfer, and basic troubleshooting.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons-outlined">local_shipping</span>
-                    </div>
-                    <h3>Home Delivery</h3>
-                    <p>Local delivery available for Siddapur and nearby areas on select orders.</p>
-                </div>
+            <div class="mt-8 text-center md:hidden">
+                <button
+                    class="w-full h-12 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">
+                    View All Products
+                </button>
             </div>
         </div>
     </section>
-
     <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Reviews</span>
-                <h2 class="section-title">What Our Customers Say</h2>
-                <p class="section-description">Real feedback from happy customers</p>
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Testimonials</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-[#121714]">What our customers say</h2>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-background-light p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
                     </div>
-                    <p class="testimonial-text">"Bought a Samsung phone from Arvi Enterprises. Best price in Siddapur
-                        and the owner is very helpful. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Ramesh Kumar</h4>
-                            <span>Siddapur</span>
+                    <p class="text-gray-700 italic mb-6">"Bought my new Samsung phone here. The staff was incredibly
+                        helpful in explaining the features and transferring my data. Highly recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a smiling man"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtqlNmrnyvMujjjjhmAPZFwn4-xy0e5nsPXorWJdWKYEZxPxvpIr7I51USgbv8-blZUp2Z3ug25D_wCN-oWDZ9oJIAvMKQ0dNRRfH-h7gngxMOkJA1MjaqjhLriZXNJy9DQf8N0u8jIsGAbQEC2hDgK7gWGMtinlFFCZdN1SqpIcsUIsHO8uRTtboQQKOitJ4FBLh7xWgM8cMmykcKEBD24bHUNV3qoik3HOZaMEffuXQmwH18YstlvltHw6oiOKKJvtorQcQHnoGd')">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-[#121714]">Ravi Kumar</p>
+                            <p class="text-xs text-gray-500">Local Guide</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
+                <!-- Review 2 -->
+                <div
+                    class="bg-background-light p-8 rounded-2xl relative mt-0 md:-mt-4 shadow-lg border border-gray-100">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
                     </div>
-                    <p class="testimonial-text">"Got a second-hand iPhone in excellent condition. They checked
-                        everything before selling. Very trustworthy shop!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">P</div>
-                        <div class="author-info">
-                            <h4>Priya Hegde</h4>
-                            <span>Sagar</span>
+                    <p class="text-gray-700 italic mb-6">"Best mobile shop in Siddapur! Got a great deal on a
+                        second-hand iPhone. The condition was pristine, just like new. Trustworthy people."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a smiling woman"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5I4jE8x4m6JsO9MqsBr6ANmLDSIAZDufR-yCHWqeLOUg_rPFk80YWQKSec4PBuL96ucF5GnqY14g92vwJDU53HH1qYo7s0E6SVVzcFEn5ouU0G1KktV6onR06EYPxSuUJmXTBVUTUlobccbFBl72OQeJrMPrn6tnKRtO2zQw4iBuoczW9ChgG1ekDSWKIQojm34b6rZmXsJW2iDjbMSCteuHoQLllcSCY7saCajDxVpaTGN3WWgErPwBaHMiCJiugf3GEI9Y68hVK')">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-[#121714]">Ananya Hegde</p>
+                            <p class="text-xs text-gray-500">Teacher</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star_half</span>
+                <!-- Review 3 -->
+                <div class="bg-background-light p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        <span class="material-symbols-outlined text-lg fill-current">star</span>
                     </div>
-                    <p class="testimonial-text">"Good collection of accessories at reasonable prices. Screen guard
-                        fitting was done perfectly. Will come again."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div class="author-info">
-                            <h4>Anil Naik</h4>
-                            <span>Siddapur</span>
+                    <p class="text-gray-700 italic mb-6">"My phone screen was shattered, and they fixed it within hours.
+                        The finish is perfect and the price was very reasonable. Thank you Arvi Enterprises!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a young man"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqkv3MiJ6HrUfmiY3c30bPk2eCEqBn86MSWrK889JYvaaPC_aFtK4_LS7A6PhlppXB9S-KFr5Y7RqfIqyrhljP2kZNNElV72_oFiIpqyMP08yLzEMKhZXl6zrGOESYGYxCddD_TtIfkggs8CVxrxDITOptF6raDXUlarGD-_INN3360Xq_wd92s-m-AiRW6Gld--lUkwW4hEx4_9rqEPTjJC-mxaYC5SHjlSHR8YlfTGEz9Yy6MJEwt4EzhMVVKXPTqkw5FaNtukY3')">
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                        <span class="material-icons-outlined">star</span>
-                    </div>
-                    <p class="testimonial-text">"Purchased a smartwatch for my father. Great quality and service. They
-                        even helped set it up. Thank you!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Suresh Bhat</h4>
-                            <span>Talaguppa</span>
+                        <div>
+                            <p class="font-bold text-sm text-[#121714]">Karthik S</p>
+                            <p class="text-xs text-gray-500">Software Engineer</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Get in Touch</span>
-                <h2 class="section-title">Visit Our Shop</h2>
-                <p class="section-description">We'd love to hear from you</p>
+    <!-- Services Section -->
+    <section class="py-20 bg-background-light relative" id="services">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Our Services</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-[#121714] mb-3">Complete Mobile Solutions</h2>
+                <p class="text-gray-600">From sales to repairs, we've got all your mobile needs covered.</p>
             </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <span class="material-icons-outlined">location_on</span>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Our Address</h3>
-                            <p>Sagar Cross, Siddapur,<br>Karnataka 581355</p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[32px]">build</span>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <span class="material-icons-outlined">call</span>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone Number</h3>
-                            <p><a href="tel:+919449360059">+91 94493 60059</a></p>
-                        </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Phone Repairs</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Expert repair services for all brands. Screen
+                        replacement, battery replacement, charging port fixes, and more. Fast turnaround guaranteed.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Screen & Display Repair
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Battery Replacement
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Water Damage Recovery
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[32px]">shopping_bag</span>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <span class="material-icons-outlined">schedule</span>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Working Hours</h3>
-                            <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
-                        </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile Accessories</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Premium accessories to protect and enhance your
+                        device. Cases, screen protectors, chargers, earphones, and more.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Protective Cases & Covers
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Tempered Glass & Screen Guards
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Chargers & Power Banks
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[32px]">verified_user</span>
                     </div>
-                    <div class="contact-buttons">
-                        <a href="tel:+919449360059" class="btn btn-primary btn-lg">
-                            <span class="material-icons-outlined">call</span>
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/919449360059?text=Hello%20Arvi%20Enterprises!"
-                            class="btn btn-secondary btn-lg" target="_blank">
-                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                            WhatsApp
-                        </a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Warranty Support</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Complete warranty assistance and after-sales support.
+                        We stand behind every product we sell with dedicated customer service.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Manufacturer Warranty Claims
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Extended Protection Plans
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            Dedicated Support Team
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-20 bg-white relative overflow-hidden" id="about">
+        <div
+            class="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">About Us</span>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-[#121714] mb-4">Your Trusted Mobile Partner in
+                        Siddapur</h2>
+                </div>
+                <div class="bg-background-light p-8 lg:p-12 rounded-3xl border border-gray-100">
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            <span class="kannada-text font-bold text-primary text-xl">Arvi Mobiles</span> has been
+                            serving the Siddapur community with dedication and trust. We are committed to providing the
+                            best mobile shopping experience with genuine products, competitive pricing, and exceptional
+                            customer service.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Our team of experienced professionals is passionate about mobile technology and dedicated to
+                            helping you find the perfect device that fits your needs and budget. Whether you're looking
+                            for the latest flagship smartphone, a reliable budget phone, or expert repair services,
+                            we're here to help.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                            <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+                                <div class="text-3xl font-black text-primary mb-2">5+</div>
+                                <div class="text-sm text-gray-600 font-medium">Years of Experience</div>
+                            </div>
+                            <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+                                <div class="text-3xl font-black text-primary mb-2">1000+</div>
+                                <div class="text-sm text-gray-600 font-medium">Happy Customers</div>
+                            </div>
+                            <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+                                <div class="text-3xl font-black text-primary mb-2">100%</div>
+                                <div class="text-sm text-gray-600 font-medium">Genuine Products</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-6 bg-primary/5 rounded-xl border-l-4 border-primary">
+                            <p class="text-gray-700 italic">
+                                "At Arvi Mobiles, we believe in building lasting relationships with our customers
+                                through honest service, quality products, and fair pricing. Your trust is our greatest
+                                achievement."
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-map">
+            </div>
+        </div>
+    </section>
+    <!-- Contact & Footer -->
+    <section class="bg-[#121714] text-white pt-20 pb-10 relative overflow-hidden" id="contact">
+        <!-- Decorative Pattern for Footer -->
+        <div class="absolute inset-x-0 top-0 h-2 bg-pattern-kasuti opacity-20"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 mb-16">
+                <!-- Contact Info -->
+                <div class="lg:w-1/3 flex flex-col gap-8">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <img alt="Arvi Mobiles Logo" class="w-11 h-11 rounded-xl shadow-sm bg-white/5"
+                                src="assets/logo.svg" />
+                            <h2 class="kannada-text text-2xl font-bold">ಅರ್ವಿ ಮೊಬೈಲ್ಸ್</h2>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed">Your one-stop destination for mobile phones and
+                            accessories in Siddapur. Quality you can trust, service you can rely on.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                            <div>
+                                <h4 class="font-bold text-white">Visit Us</h4>
+                                <p class="text-gray-400 text-sm">Sagara Cross, Siddapur,<br />Karnataka 581355</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">call</span>
+                            <div>
+                                <h4 class="font-bold text-white">Call Us</h4>
+                                <p class="text-gray-400 text-sm">+91 94493 60059</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">mail</span>
+                            <div>
+                                <h4 class="font-bold text-white">Email</h4>
+                                <p class="text-gray-400 text-sm">ravisdpr@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map -->
+                <div
+                    class="lg:w-2/3 rounded-2xl overflow-hidden h-[300px] lg:h-auto bg-gray-800 relative shadow-2xl border border-gray-700">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.123456789!2d74.89!3d14.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDIxJzAwLjAiTiA3NMKwNTMnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <a href="https://maps.google.com/?q=Sagar+Cross+Siddapur+Karnataka+581355" class="map-overlay-btn"
-                        target="_blank">
-                        <span class="material-icons-outlined">open_in_new</span>
-                        Open in Google Maps
-                    </a>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.488508403925!2d74.8873183095572!3d14.341117351680534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc09e2711933e9%3A0x61872fae317b70a8!2sRavi%20Enterprises!5e0!3m2!1sen!2sin!4v1768394635735!5m2!1sen!2sin"
+                        width="100%" height="100%"
+                        style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%);" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full block"></iframe>
                 </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2024 Arvi Enterprises. All rights reserved.</p>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <span class="logo-kannada">ಆರ್ವಿ ಎಂಟರ್‌ಪ್ರೈಸಸ್</span>
-                        <span class="logo-english">Arvi Enterprises</span>
-                    </a>
-                    <p>Your trusted mobile shop in Siddapur. Bringing you the best phones, accessories, and service
-                        since years.</p>
-                    <div class="footer-social">
-                        <a href="https://wa.me/919449360059" class="social-link" aria-label="WhatsApp" target="_blank">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                        </a>
-                        <a href="tel:+919449360059" class="social-link" aria-label="Call">
-                            <span class="material-icons-outlined">call</span>
-                        </a>
-                        <a href="https://maps.google.com/?q=Sagar+Cross+Siddapur+Karnataka+581355" class="social-link"
-                            aria-label="Location" target="_blank">
-                            <span class="material-icons-outlined">location_on</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="#products">New Smartphones</a></li>
-                        <li><a href="#products">Second-Hand Phones</a></li>
-                        <li><a href="#products">Accessories</a></li>
-                        <li><a href="#products">Smart Watches</a></li>
-                        <li><a href="#products">Power Banks</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><span class="material-icons-outlined">location_on</span> Sagar Cross, Siddapur, Karnataka 581355
-                    </p>
-                    <p><span class="material-icons-outlined">call</span> <a href="tel:+919449360059">+91 94493 60059</a>
-                    </p>
-                    <p><span class="material-icons-outlined">schedule</span> Mon-Sat: 9AM-8PM</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Arvi Enterprises. All rights reserved.</p>
-                <p>Made with ❤️ in Siddapur</p>
-            </div>
+    <!-- Floating WhatsApp Button -->
+    <a aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] transition-all hover:scale-110 z-50 group"
+        href="https://wa.me/917349758011" target="_blank">
+        <span class="material-symbols-outlined text-white text-[32px]">chat</span>
+        <!-- Tooltip -->
+        <div
+            class="absolute right-full mr-3 bg-white text-gray-800 text-xs font-bold py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat with us
         </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919449360059?text=Hello%20Arvi%20Enterprises!%20I%20have%20an%20enquiry."
-        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-        <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
 </body>
 
 </html>
